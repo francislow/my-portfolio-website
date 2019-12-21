@@ -1,0 +1,295 @@
+/* SHARED ACROSS ALL PAGE */
+
+html {
+	scroll-behavior: smooth;
+}
+
+.full-height {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+
+.my-nav-bar {
+    width: 100%;
+}
+
+/* FONTS */
+
+@font-face {
+	font-family: myFirstFont;
+	src: url(fonts/MblackFont-Regular.ttf);
+}
+
+.m-black-font {
+	font-family: myFirstFont;
+}
+
+@font-face {
+	font-family: mySecFont;
+	src: url(fonts/212-Moon-Child-Sans.otf);
+}
+
+.moon-child-font {
+    font-family: mySecFont;
+}
+
+/* MOBILE NAV BAR */
+
+.collapse-btn {
+    position: fixed;
+    z-index:99;
+    right: 0;
+    font-size: 5vw;
+    color: black;
+    padding: 0.2em;
+}
+
+.collapse-btn:focus {
+    outline: 0;
+}
+
+#collapsible-nav {
+    position: fixed;
+    z-index:98;
+    width: 100%;
+    left: 0;
+    top: -3vh;
+    margin: 0;
+    background-color: rgba(245, 245, 245, 0.897);
+}
+
+#collapsible-nav ul {
+    width: 100%;
+    text-align: center;
+}
+
+#collapsible-nav li:nth-of-type(2n) {
+    border-radius: 10px;
+    background-color: rgba(255, 187, 0, 0.411);
+}
+
+#collapsible-nav li a {
+    font-size: 30px;
+    color: black;
+    margin: 0;
+    line-height: 22vh;
+}
+
+
+
+/* DESKTOP NAV BAR */
+
+#normal-nav {
+    position: fixed;
+    z-index: 99;
+    right: 1vw;
+    margin: 1vh;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgba(224, 224, 224, 0.401);
+    border-radius: 7px;
+}
+
+#normal-nav li {
+    margin-top: 1vh;
+}
+
+#normal-nav li a {
+    display: inline;
+    margin: 2vw;
+    font-size: 1em;
+	color: rgba(0, 0, 0, 0.897);
+	font-style: oblique;
+    transition: font-size 0.2s;
+}
+
+/* Navigation bar on hover */
+#normal-nav li a:hover {
+	font-size: 115%;
+	font-weight: bold;
+	background-color: inherit;
+}
+
+
+
+/* HOME PAGE */
+
+.wrapper-home {
+    background: url("images/yellowbackground.jpg");
+    height: 100%;
+}
+
+.wrapper-home-content {
+    position: absolute;
+    top: 28vh;
+    width: 100%;
+    margin: 0 0 -25% 0;
+    /* background-color: cornflowerblue; */
+}
+
+.name-text {
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-size: 55px;
+    /* background-color: yellow; */
+}
+
+.welcome-text {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin: 0;
+    /* background-color: red; */
+}
+
+.wrapper-explore {
+    margin-top: 15vh;
+    text-align: center;
+    /* background-color: grey; */
+}
+
+.wrapper-explore a {
+    padding: 0.5em;
+    color: whitesmoke;
+    font-size: 30px;
+    border: white solid 2px;
+}
+
+
+
+/* SHARED */
+
+.wrapper-page-content {
+    position: relative;
+    padding: 4vh 10vw 4vh 10vw;
+    
+}
+
+.page-title {
+    font-size: 35px;
+}
+
+
+/* ABOUT */
+
+.about-page {
+    background-color: rgb(255, 253, 210);
+    height: 100%;
+}
+
+.wrapper-intro {
+    margin-top: 7vh;
+    font-size: 20px;
+}
+
+.call-for-action-text {
+    font-size: 25px;
+    margin-top: 7vh;
+}
+
+.profile-img {
+    border-radius: 15px;
+    height: 200px;
+    width: 200px;
+}
+
+.smiley-img {
+    margin-top: 3vh;
+    height: 30px;
+    width: 70px;
+}
+
+
+
+/* PORTFOLIO */
+
+.portfolio-page {
+    background-color: rgb(255, 234, 166);
+    height: 100%;
+}
+
+
+
+/* CONTACT */
+
+.contact-page {
+    background-image: url(./images/yellowbackground.jpg);
+    height: 100%;
+}
+
+.wrapper-form {
+    margin-top: 5vh;
+    border: 1px solid black;
+    height: 60vh;
+}
+.wrapper-icons {
+    /* background-color: tomato; */
+    height: 20vh;
+}
+
+.contact-profile-icon {
+    height: 10vw;
+    width: 10vw;
+    max-width: 50px;
+    max-height: 50px;
+    margin: 7vh 4vw 0 4vw;
+}
+
+
+
+/* RESPONSIVE */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .mobile-only {
+        display: initial;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .mobile-only {
+        display: initial;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+}

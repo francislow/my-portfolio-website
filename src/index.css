@@ -1,0 +1,9 @@
+/* Universal CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    height: fit-content;
+}
