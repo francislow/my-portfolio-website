@@ -1,5 +1,5 @@
 import React from "react";
-import mypicture from "./images/mypicture.jpg";
+import mypicture from "./images/mypicture.png";
 import smiley from "./images/smiley.png";
 
 function About() {
