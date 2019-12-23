@@ -1,9 +1,11 @@
 import React from "react";
+import PortfolioGallery from "./PortfolioGallery";
 
 function Portfolio() {
   return (
-    <div class="wrapper-page-content portfolio-page">
-      <p class="page-title m-black-font">PORTFOLIO</p>
+    <div className="wrapper-page-content portfolio-page">
+      <p className="page-title m-black-font">PORTFOLIO</p>
+      <PortfolioGallery />
     </div>
   );
 }
