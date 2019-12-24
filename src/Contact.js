@@ -7,7 +7,15 @@ function Contact() {
   return (
     <div className="wrapper-page-content contact-page">
       <p className="page-title m-black-font">CONTACT</p>
-      <div className="wrapper-form">FORM SECTION</div>
+      <div className="wrapper-form">
+        <form className="mail-form" action="contactform.php" method="post">
+          <input type="text" name="name" placeholder="Full Name" />
+          <input type="text" name="email" placeholder="Email" />
+          <input type="text" name="subject" placeholder="Subject" />
+          <textarea name="message" placeholder="Message" />
+          <button type="submit" name="submit">Send email!</button>
+        </form>
+      </div>
       <div className="wrapper-icons">
         <a target="_blank" href="https://www.instagram.com/friendcislol/"><img className="contact-profile-icon" src={insta_icon} alt="Insta Icon"/></a>
         <a target="_blank" href="https://github.com/francislow"><img className="contact-profile-icon" src={github_icon} alt="Github Icon"/></a>

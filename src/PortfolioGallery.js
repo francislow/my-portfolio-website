@@ -78,7 +78,7 @@ function PortfolioGallery() {
         <div className="filter-div photo-frame-container div2 mobile show">
           <img src={unmiximg} />
           <div class="overlay">
-            <p class="project-name-text moon-child-font">Unmix Gallery</p>
+            <p class="project-name-text moon-child-font">Unmix</p>
           </div>
         </div>
         <div className="filter-div photo-frame-container div3 web show">

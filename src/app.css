@@ -307,7 +307,7 @@ html {
 }
 
 .photo-frame-container:hover .overlay .project-name-text {
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .photo-frame-container:hover img {
@@ -317,7 +317,7 @@ html {
 
 .project-name-text {
   color: white;
-  font-size: 50px;
+  font-size: 35px;
 
   /* To center text in overlay */
   position: absolute;
@@ -432,6 +432,15 @@ html {
     font-size: 25px;
     margin: 0;
     /* background-color: red; */
+  }
+
+  .project-name-text {
+    color: white;
+    font-size: 50px;
+  }
+
+  .photo-frame-container:hover .overlay .project-name-text {
+    font-size: 20px;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
