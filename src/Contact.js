@@ -2,13 +2,14 @@ import React from "react";
 import insta_icon from "./images/insta-icon.png";
 import github_icon from "./images/github-icon.png";
 import linkedin_icon from "./images/linkedin-icon.png";
+import php_form from "./contactform.php"
 
 function Contact() {
   return (
     <div className="wrapper-page-content contact-page">
       <p className="page-title m-black-font">CONTACT</p>
       <div className="wrapper-form">
-        <form className="mail-form" action="contactform.php" method="post">
+        <form className="mail-form" action={php_form} method="post">
           <input type="text" name="name" placeholder="Full Name" />
           <input type="text" name="email" placeholder="Email" />
           <input type="text" name="subject" placeholder="Subject" />

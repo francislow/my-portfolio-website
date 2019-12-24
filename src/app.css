@@ -246,24 +246,16 @@ html {
 }
 
 .div1 {
-  background-color: #71bfff;
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-.div1 img {
-  height: 100%;
-  width: 100%;
-}
-
 .div2 {
-  background-color: #82ff88;
   grid-column-start: 3;
   grid-column-end: 5;
 }
 
 .div3 {
-  background-color: #ffcd6f;
   grid-column-start: 2;
   grid-column-end: 4;
 }
