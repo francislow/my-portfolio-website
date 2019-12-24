@@ -129,7 +129,7 @@ html {
   margin: 0;
   text-align: center;
   color: black;
-  font-size: 55px;
+  font-size: 65px;
   /* background-color: yellow; */
 }
 
@@ -202,40 +202,40 @@ html {
 }
 
 .wrapper-portfolio-gallery {
-    margin-top: 5vh;
+  margin-top: 5vh;
 }
 
 .wrapper-buttons {
-    background-color: burlywood;
 }
 
-
 .btn {
-    border: none;
-    outline: none;
-    margin: 4px;
-    background-color: #f1f1f1;
-    cursor: pointer;
-  }
-  
-  /* Add a light grey background on mouse-over */
-  .btn:hover {
-    background-color: #ddd;
-  }
-  
-  /* Add a dark background to the active button */
-  .btn.active {
-    background-color: #666;
-    color: white;
-  }
+  border: none;
+  outline: none;
+  margin: 4px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
 
-  .container {
-    display: grid;
-    margin-top: 1vh;
-    background-color: blueviolet;
-    grid-template-rows: 130px 130px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 3px;
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.container {
+  display: grid;
+  height: 55vh;
+  width: 100%;
+  margin-top: 4vh;
+  padding: 0;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
 
 .filter_div {
@@ -246,33 +246,26 @@ html {
 }
 
 .div1 {
-    background-color: #71bfff;
-    grid-column-start: 1;
-    grid-column-end: 4;
+  background-color: #71bfff;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.div1 img {
+  height: 100%;
+  width: 100%;
 }
 
 .div2 {
-    background-color: #82ff88;
-    grid-column-start: 4;
-    grid-column-end: 7;
+  background-color: #82ff88;
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
 
 .div3 {
-    background-color: #ffcd6f;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.div4 {
-    background-color: #ff79ff;
-    grid-column-start: 3;
-    grid-column-end: 5;
-}
-
-.div5 {
-    background-color: #ff6868;
-    grid-column-start: 5;
-    grid-column-end: 7;
+  background-color: #ffcd6f;
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 
 .filter-div.show {
@@ -281,6 +274,72 @@ html {
 
 .filter-div.hide {
   display: none;
+}
+
+.photo-frame-container {
+  position: relative;
+  border-radius: 10px;
+  /* Make all children fit into this rounded container */
+  overflow: hidden;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  /* This will set opacity of text too, so no go..
+	background-color: #000000;
+	opacity: 0.3;
+	*/
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+/* Woww im amazed, how to access into overlay element and change its properties */
+.photo-frame-container:hover .overlay {
+  opacity: 0.7;
+  height: 13%;
+}
+
+.photo-frame-container:hover .overlay .project-name-text {
+  font-size: 20px;
+}
+
+.photo-frame-container:hover img {
+  /* Do image zoom here */
+  transform: scale(1.07);
+}
+
+.project-name-text {
+  color: white;
+  font-size: 50px;
+
+  /* To center text in overlay */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  transition: 0.5s ease;
+}
+
+.photo-frame-container img {
+  width: 100%;
+  height: 100%;
+
+  /* Do image zoom transition here */
+  transition: 0.3s ease;
+  /*
+	transition: transform .25s, visibility .25s ease-in;
+	*/
 }
 
 /* CONTACT */
@@ -338,6 +397,41 @@ html {
 
   .desktop-only {
     display: initial;
+  }
+
+  .container {
+    display: grid;
+    height: 40vh;
+    margin-top: 7vh;
+    padding: 0;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .div1 {
+    grid-column: 1 / 2;
+  }
+
+  .div2 {
+    grid-column: 2 / 3;
+  }
+
+  .div3 {
+    grid-column: 3 / 4;
+  }
+
+  .name-text {
+    margin: 0;
+    font-size: 130px;
+    /* background-color: yellow; */
+  }
+  
+  .welcome-text {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    margin: 0;
+    /* background-color: red; */
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
