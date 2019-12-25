@@ -11,7 +11,9 @@ html {
   text-align: center;
 }
 
-:focus { outline: none; }
+:focus {
+  outline: none;
+}
 
 .my-nav-bar {
   width: 100%;
@@ -351,6 +353,14 @@ html {
 .wrapper-form {
   margin-top: 2vh;
   height: 60vh;
+}
+
+/* Prevent google autocomplete to change background to white */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgb(255, 247, 204) inset !important;
 }
 
 .form-detail {
