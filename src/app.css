@@ -11,6 +11,8 @@ html {
   text-align: center;
 }
 
+:focus { outline: none; }
+
 .my-nav-bar {
   width: 100%;
 }
@@ -18,21 +20,21 @@ html {
 /* FONTS */
 
 @font-face {
-  font-family: myFirstFont;
+  font-family: mBlackFont;
   src: url(fonts/MblackFont-Regular.ttf);
 }
 
 .m-black-font {
-  font-family: myFirstFont;
+  font-family: mBlackFont;
 }
 
 @font-face {
-  font-family: mySecFont;
+  font-family: moonChildFont;
   src: url(fonts/212-Moon-Child-Sans.otf);
 }
 
 .moon-child-font {
-  font-family: mySecFont;
+  font-family: moonChildFont;
 }
 
 /* MOBILE NAV BAR */
@@ -130,7 +132,6 @@ html {
   text-align: center;
   color: black;
   font-size: 65px;
-  /* background-color: yellow; */
 }
 
 .welcome-text {
@@ -138,13 +139,11 @@ html {
   color: black;
   font-size: 20px;
   margin: 0;
-  /* background-color: red; */
 }
 
 .wrapper-explore {
-  margin-top: 15vh;
+  margin-top: 10vh;
   text-align: center;
-  /* background-color: grey; */
 }
 
 .wrapper-explore a {
@@ -152,6 +151,12 @@ html {
   color: whitesmoke;
   font-size: 30px;
   border: white solid 2px;
+  transition: all 0.3s;
+}
+
+.wrapper-explore a:hover {
+  background-color: rgb(180, 180, 180, 0.563);
+  border: rgba(180, 180, 180, 0.563) solid 2px;
 }
 
 /* SHARED */
@@ -214,6 +219,7 @@ html {
   margin: 4px;
   background-color: #f1f1f1;
   cursor: pointer;
+  transition: 0.7s ease;
 }
 
 /* Add a light grey background on mouse-over */
@@ -223,6 +229,7 @@ html {
 
 /* Add a dark background to the active button */
 .btn.active {
+  transition: 1s ease;
   background-color: #666;
   color: white;
 }
@@ -342,12 +349,50 @@ html {
 }
 
 .wrapper-form {
-  margin-top: 5vh;
-  border: 1px solid black;
+  margin-top: 2vh;
   height: 60vh;
 }
+
+.form-detail {
+  background-color: rgb(255, 247, 204);
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+  padding: 3px;
+  margin-top: 5px;
+}
+
+.form-detail::placeholder {
+  font-family: moonChildFont;
+}
+
+.form-detail[type="text"] {
+  font-family: moonChildFont;
+}
+
+.form-message {
+  background-color: rgb(255, 247, 204);
+  height: 30vh;
+  margin-top: 3vh;
+}
+
+.send-email-btn {
+  font-family: moonChildFont;
+  color: white;
+  background-color: rgb(70, 70, 70);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 3vh;
+  transition: all 0.3s;
+}
+
+.send-email-btn:hover {
+  transform: scale(1.1);
+}
+
 .wrapper-icons {
-  /* background-color: tomato; */
   height: 20vh;
 }
 
@@ -357,6 +402,13 @@ html {
   max-width: 50px;
   max-height: 50px;
   margin: 7vh 4vw 0 4vw;
+  transition: all 0.3s;
+}
+
+.contact-profile-icon:hover {
+  opacity: 0.4;
+  transform: scale(1.1);
+  transform: rotate(7deg);
 }
 
 /* RESPONSIVE */
@@ -417,7 +469,7 @@ html {
     font-size: 100px;
     /* background-color: yellow; */
   }
-  
+
   .welcome-text {
     text-align: center;
     color: black;
@@ -433,6 +485,11 @@ html {
 
   .photo-frame-container:hover .overlay .project-name-text {
     font-size: 20px;
+  }
+
+  .wrapper-form {
+    padding-left: 20vw;
+    padding-right: 20vw;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
