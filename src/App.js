@@ -9,10 +9,10 @@ import "./app.css";
 function App() {
   return (
     <Router>
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/project-item/:key" component={ProjectItemPage} />
-        </Switch>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/project-item/:key" component={ProjectItemPage} />
+      </Switch>
     </Router>
   );
 }

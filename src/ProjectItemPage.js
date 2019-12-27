@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import rightnavarrow from "./images/rightarrow.png";
 import leftnavarrow from "./images/leftarrow.png";
 import * as projectsData from "./projectsData.json";
@@ -6,9 +6,9 @@ import * as projectsData from "./projectsData.json";
 function ProjectItemPage({ match }) {
   // All images (load all images here to solve the require() problem as static paths are required)
   const projectImgsHolder = {
-      "poofers": require("./images/pooferitem.png"),
-      "unmix": require("./images/unmixitem.png"),
-      "portfolio-website": require("./images/noimageitem.png")
+    poofers: require("./images/pooferitem.png"),
+    unmix: require("./images/unmixitem.png"),
+    "portfolio-website": require("./images/noimageitem.png")
   };
 
   const key = match.params.key;
@@ -24,9 +24,9 @@ function ProjectItemPage({ match }) {
     <div className="wrapper-item-page">
       <div className="wrapper-media-region">
         <div className="wrapper-selection">
-          <img className="nav-arrow" src={leftnavarrow} />
-          <img className="item-img" src={projectImg} />
-          <img className="nav-arrow" src={rightnavarrow} />
+          <img className="nav-arrow" src={leftnavarrow} alt="leftarrow" />
+          <img className="item-img" src={projectImg} alt="projectimg" />
+          <img className="nav-arrow" src={rightnavarrow} alt="rightarrow" />
         </div>
       </div>
       <div className="wrapper-details-region">
@@ -53,19 +53,27 @@ function ProjectItemPage({ match }) {
             <p>Source Code:</p>
           </div>
           <div className="grid-div project-code-div2">
-            <p><a target="_blank" href={sourceCodeLink}>{sourceCodeLink}</a></p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={sourceCodeLink}
+              >
+                {sourceCodeLink}
+              </a>
+            </p>
           </div>
         </div>
       </div>
       <div className="wrapper-download-region">
-        {isOnPlaystore ? <a
-          target="_blank"
-          href={playstoreUrl}>
-          <img
-            alt="Get it on Google Play"
-            src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
-          />
-        </a> : null}
+        {isOnPlaystore ? (
+          <a target="_blank" rel="noopener noreferrer" href={playstoreUrl}>
+            <img
+              alt="Get it on Google Play"
+              src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+            />
+          </a>
+        ) : null}
       </div>
     </div>
   );

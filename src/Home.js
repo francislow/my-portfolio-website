@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./app.css";
-
 function Home() {
   return (
     <div className="wrapper-home">

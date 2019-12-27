@@ -72,7 +72,7 @@ function PortfolioGallery() {
       <div className="container">
         <div className="filter-div photo-frame-container div1 mobile show">
           <Link to="/project-item/poofers">
-            <img src={poofersimg} />
+            <img src={poofersimg} alt="poofersimg"/>
             <div className="overlay">
               <p className="project-name-text moon-child-font">Poofers</p>
             </div>
@@ -81,7 +81,7 @@ function PortfolioGallery() {
 
         <div className="filter-div photo-frame-container div2 mobile show">
           <Link to="/project-item/unmix">
-            <img src={unmiximg} />
+            <img src={unmiximg} alt="unmiximg"/>
             <div className="overlay">
               <p className="project-name-text moon-child-font">Unmix</p>
             </div>
@@ -89,7 +89,7 @@ function PortfolioGallery() {
         </div>
         <div className="filter-div photo-frame-container div3 web show">
           <Link to="/project-item/portfolio-website">
-            <img src={portfoliopageimg} />
+            <img src={portfoliopageimg} alt="portfoliowebimg"/>
             <div className="overlay">
               <p className="project-name-text moon-child-font">
                 Portfolio Page
