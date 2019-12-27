@@ -1,12 +1,25 @@
 {
     "poofers": {
         "projectName": "Poofers",
-        "projectDesc": "A 2D android arcade game app",
-        "sourceCodeLink" : "https://github.com/francislow/poofers"
+        "projectDesc": "A native android 2D arcade game application",
+        "devTools": "Java, Libgdx Framework, InkScape, Android Studios",
+        "playstoreUrl": "https://play.google.com/store/apps/details?id=com.chalkboyygames",
+        "sourceCodeLink" : "https://github.com/francislow/poofers",
+        "isOnPlaystore": true
     },
     "unmix": {
         "projectName": "Unmix",
-        "projectDesc": "An android app that allows user to store and manage pictures locally in a separate gallery",
-        "sourceCodeLink" : "https://github.com/francislow/unmix-photo-gallery"
+        "projectDesc": "A native android application that allows user to store and manage pictures locally in a separate gallery",
+        "devTools": "Java, SQLite, Android Studios",
+        "playstoreUrl": "https://play.google.com/store/apps/details?id=com.chalkboystudios.franc.unmix",
+        "sourceCodeLink" : "https://github.com/francislow/unmix-photo-gallery",
+        "isOnPlaystore": true
+    },
+    "portfolio-website": {
+        "projectName": "My Website",
+        "projectDesc": "This current website you are seeing is built by me mainly to showcase my portfolio.",
+        "devTools": "HTML, CSS, JavaScript, React, JSON, InkScape",
+        "sourceCodeLink" : "https://github.com/francislow/my-portfolio-website",
+        "isOnPlaystore": false
     }
 }

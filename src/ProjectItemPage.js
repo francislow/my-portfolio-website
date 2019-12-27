@@ -4,25 +4,21 @@ import leftnavarrow from "./images/leftarrow.png";
 import * as projectsData from "./projectsData.json";
 
 function ProjectItemPage({ match }) {
-  const [projectName, setProjectName] = useState("no project name");
-  const [projectDesc, setProjectDesc] = useState("no project desc");
-  const [sourceCodeLink, setSourceCodeLink] = useState("no source code link");
-  const [projectImg, setProjectImg] = useState();
-
   // All images (load all images here to solve the require() problem as static paths are required)
   const projectImgsHolder = {
       "poofers": require("./images/pooferitem.png"),
-      "unmix": require("./images/unmixitem.png")
+      "unmix": require("./images/unmixitem.png"),
+      "portfolio-website": require("./images/noimageitem.png")
   };
 
-  useEffect(() => {
-    let passedKey = match.params.key;
-    // setState is asynchronous, console logging right after will not work
-    setProjectName(projectsData.default[passedKey].projectName);
-    setProjectDesc(projectsData.default[passedKey].projectDesc);
-    setSourceCodeLink(projectsData.default[passedKey].sourceCodeLink);
-    setProjectImg(projectImgsHolder[passedKey]);
-  }, []);
+  const key = match.params.key;
+  const projectName = projectsData.default[key].projectName;
+  const projectDesc = projectsData.default[key].projectDesc;
+  const sourceCodeLink = projectsData.default[key].sourceCodeLink;
+  const projectTools = projectsData.default[key].devTools;
+  const playstoreUrl = projectsData.default[key].playstoreUrl;
+  const isOnPlaystore = projectsData.default[key].isOnPlaystore;
+  const projectImg = projectImgsHolder[key];
 
   return (
     <div className="wrapper-item-page">
@@ -35,36 +31,41 @@ function ProjectItemPage({ match }) {
       </div>
       <div className="wrapper-details-region">
         <div className="wrapper-grid">
-          <div className="project-name-div1">
+          <div className="grid-div project-name-div1">
             <p>Title:</p>
           </div>
-          <div className="project-name-div2">
+          <div className="grid-div project-name-div2">
             <p>{projectName}</p>
           </div>
-          <div className="project-desc-div1">
+          <div className="grid-div project-desc-div1">
             <p>Description:</p>
           </div>
-          <div className="project-desc-div2">
+          <div className="grid-div project-desc-div2">
             <p>{projectDesc}</p>
           </div>
-          <div className="project-code-div1">
+          <div className="grid-div project-tools-div1">
+            <p>Development Tool:</p>
+          </div>
+          <div className="grid-div project-tools-div2">
+            <p>{projectTools}</p>
+          </div>
+          <div className="grid-div project-code-div1">
             <p>Source Code:</p>
           </div>
-          <div className="project-code-div2">
-            <p>{sourceCodeLink}</p>
+          <div className="grid-div project-code-div2">
+            <p><a target="_blank" href={sourceCodeLink}>{sourceCodeLink}</a></p>
           </div>
         </div>
       </div>
       <div className="wrapper-download-region">
-        <a
+        {isOnPlaystore ? <a
           target="_blank"
-          href="https://play.google.com/store/apps/details?id=com.chalkboyygames"
-        >
+          href={playstoreUrl}>
           <img
             alt="Get it on Google Play"
             src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
           />
-        </a>
+        </a> : null}
       </div>
     </div>
   );

@@ -88,10 +88,14 @@ function PortfolioGallery() {
           </Link>
         </div>
         <div className="filter-div photo-frame-container div3 web show">
-          <img src={portfoliopageimg} />
-          <div className="overlay">
-            <p className="project-name-text moon-child-font">Portfolio Page</p>
-          </div>
+          <Link to="/project-item/portfolio-website">
+            <img src={portfoliopageimg} />
+            <div className="overlay">
+              <p className="project-name-text moon-child-font">
+                Portfolio Page
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

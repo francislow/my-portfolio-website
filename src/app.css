@@ -192,9 +192,9 @@ html {
 }
 
 .profile-img {
-  border-radius: 15px;
-  height: 200px;
-  width: 200px;
+  border-radius: 20%;
+  height: 150px;
+  width: 150px;
 }
 
 .smiley-img {
@@ -426,64 +426,79 @@ input:-webkit-autofill:active {
 
 /* PROJECT ITEM PAGE */
 .wrapper-item-page {
-  background-color: rgb(255, 242, 182);
+  background-image: url(./images/yellowbackground.jpg);
   width: 100%;
 }
 
 .wrapper-media-region {
-  background-color: violet;
   padding-top: 6vh;
-  height: 35vh;
+  height: 30vh;
 }
 .wrapper-details-region {
-  background-color: yellow;
-  height: 50vh;
-  padding: 20px;
+  height: 55vh;
+  padding: 15px;
 }
 
 .wrapper-grid {
-  background-color: whitesmoke;
   height: 100%;
   width: 100%;
   display: grid;
+
   text-align: center;
   font-family: moonChildFont;
-  grid-template-rows: 20% auto 20%;
+  grid-template-rows: 20% auto 20% 20%;
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
     "a1 a2"
     "b1 b2"
-    "c1 c2";
+    "c1 c2"
+    "d1 d2";
+}
+
+.grid-div {
+  background-color: rgb(253, 251, 222);
+  border: 2px solid black;
+  padding: 14px;
 }
 
 .project-name-div1 {
-    background-color: rgb(216, 175, 255);
-    grid-area: a1;
+  border-top-left-radius: 15px;
+  background-color: white;
+  grid-area: a1;
 }
 
 .project-name-div2 {
-    background-color: rgb(147, 215, 255);
-    grid-area: a2;
+  border-top-right-radius: 15px;
+  grid-area: a2;
 }
 
 .project-desc-div1 {
-    background-color: rgb(255, 144, 149);
-    grid-area: b1;
+  grid-area: b1;
 }
 
 .project-desc-div2 {
-    background-color: rgb(224, 255, 140);
-    grid-area: b2;
+  background-color: white;
+  grid-area: b2;
+}
+
+.project-tools-div1 {
+  background-color: white;
+  grid-area: c1;
+}
+
+.project-tools-div2 {
+  grid-area: c2;
 }
 
 .project-code-div1 {
-    background-color: rgb(168, 250, 131);
-    grid-area: c1;
+  border-bottom-left-radius: 15px;
+  grid-area: d1;
 }
 
 .project-code-div2 {
-    background-color: rgb(255, 103, 103);
-    grid-area: c2;
+  border-bottom-right-radius: 15px;
+  background-color: white;
+  grid-area: d2;
 }
 
 .wrapper-download-region {
@@ -511,7 +526,6 @@ input:-webkit-autofill:active {
 }
 
 .wrapper-selection {
-  background-color: brown;
   height: 100%;
   width: 100%;
   text-align: center;
