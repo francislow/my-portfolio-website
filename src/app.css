@@ -118,6 +118,7 @@ html {
 
 .wrapper-home {
   background: url("images/yellowbackground.jpg");
+  background-size: 100% 100%;
   height: 100%;
 }
 
@@ -154,6 +155,7 @@ html {
   font-size: 30px;
   border: white solid 2px;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 .wrapper-explore a:hover {
@@ -347,6 +349,7 @@ html {
 
 .contact-page {
   background-image: url(./images/yellowbackground.jpg);
+  background-size: 100% 100%;
   height: 100%;
 }
 
@@ -419,6 +422,115 @@ input:-webkit-autofill:active {
   opacity: 0.4;
   transform: scale(1.1);
   transform: rotate(7deg);
+}
+
+/* PROJECT ITEM PAGE */
+.wrapper-item-page {
+  background-color: rgb(255, 242, 182);
+  width: 100%;
+}
+
+.wrapper-media-region {
+  background-color: violet;
+  padding-top: 6vh;
+  height: 35vh;
+}
+.wrapper-details-region {
+  background-color: yellow;
+  height: 50vh;
+  padding: 20px;
+}
+
+.wrapper-grid {
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  text-align: center;
+  font-family: moonChildFont;
+  grid-template-rows: 20% auto 20%;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "a1 a2"
+    "b1 b2"
+    "c1 c2";
+}
+
+.project-name-div1 {
+    background-color: rgb(216, 175, 255);
+    grid-area: a1;
+}
+
+.project-name-div2 {
+    background-color: rgb(147, 215, 255);
+    grid-area: a2;
+}
+
+.project-desc-div1 {
+    background-color: rgb(255, 144, 149);
+    grid-area: b1;
+}
+
+.project-desc-div2 {
+    background-color: rgb(224, 255, 140);
+    grid-area: b2;
+}
+
+.project-code-div1 {
+    background-color: rgb(168, 250, 131);
+    grid-area: c1;
+}
+
+.project-code-div2 {
+    background-color: rgb(255, 103, 103);
+    grid-area: c2;
+}
+
+.wrapper-download-region {
+  height: 15vh;
+
+  /* center anchor region */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-download-region a {
+  height: fit-content;
+  width: fit-content;
+}
+
+.wrapper-download-region a img {
+  height: 70px;
+  width: 170px;
+  transition: all 0.3s;
+}
+
+.wrapper-download-region a img:hover {
+  transform: scale(1.1);
+}
+
+.wrapper-selection {
+  background-color: brown;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-arrow {
+  margin: 25px;
+  width: 25px;
+  height: 25px;
+  transition: all 0.3s;
+}
+
+.nav-arrow:hover {
+  transform: scale(1.1);
+}
+
+.item-img {
+  border-radius: 15px;
+  height: 80%;
 }
 
 /* RESPONSIVE */

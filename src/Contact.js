@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import ContactForm from "./ContactForm"
 import insta_icon from "./images/insta-icon.png";
@@ -8,7 +8,7 @@ import linkedin_icon from "./images/linkedin-icon.png";
 function Contact() {
   return (
     <div className="wrapper-page-content contact-page">
-      <p className="page-title m-black-font">CONTACT</p>
+      <p className="page-title m-black-font">CONTACT ME!</p>
       <ContactForm />
       <div className="wrapper-icons">
         <a target="_blank" href="https://www.instagram.com/friendcislol/">

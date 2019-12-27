@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import poofersimg from "./images/poofersimg.png";
 import unmiximg from "./images/unmiximg.png";
-import portfoliopageimg from "./images/portfoliopageimg.png"
+import portfoliopageimg from "./images/portfoliopageimg.png";
 
 function PortfolioGallery() {
   function filterSelection(event, filterSelected) {
@@ -70,21 +71,26 @@ function PortfolioGallery() {
       </div>
       <div className="container">
         <div className="filter-div photo-frame-container div1 mobile show">
-          <img src={poofersimg} />
-          <div class="overlay">
-            <p class="project-name-text moon-child-font">Poofers</p>
-          </div>
+          <Link to="/project-item/poofers">
+            <img src={poofersimg} />
+            <div className="overlay">
+              <p className="project-name-text moon-child-font">Poofers</p>
+            </div>
+          </Link>
         </div>
+
         <div className="filter-div photo-frame-container div2 mobile show">
-          <img src={unmiximg} />
-          <div class="overlay">
-            <p class="project-name-text moon-child-font">Unmix</p>
-          </div>
+          <Link to="/project-item/unmix">
+            <img src={unmiximg} />
+            <div className="overlay">
+              <p className="project-name-text moon-child-font">Unmix</p>
+            </div>
+          </Link>
         </div>
         <div className="filter-div photo-frame-container div3 web show">
           <img src={portfoliopageimg} />
-          <div class="overlay">
-            <p class="project-name-text moon-child-font">Portfolio Page</p>
+          <div className="overlay">
+            <p className="project-name-text moon-child-font">Portfolio Page</p>
           </div>
         </div>
       </div>

@@ -1,33 +1,20 @@
-import React from "react"
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from "./Home"
-import About from "./About"
-import Portfolio from "./Portfolio"
-import Contact from "./Contact"
-import Navbar from "./Navbar"
+import HomePage from "./HomePage.js";
+import ProjectItemPage from "./ProjectItemPage.js";
 
-import "./app.css"
+import "./app.css";
 
 function App() {
-    return (
-        <>  
-            <div className="my-nav-bar">
-                <Navbar />
-            </div>
-            <div className="full-height" id="home">
-                <Home />
-            </div>
-            <div className="full-height" id="about">
-                <About />
-            </div>
-            <div className="full-height" id="portfolio">
-                <Portfolio />
-            </div>
-            <div className="full-height" id="contact">
-                <Contact />
-            </div>
-        </>
-    )
+  return (
+    <Router>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/project-item/:key" component={ProjectItemPage} />
+        </Switch>
+    </Router>
+  );
 }
 
-export default App
+export default App;

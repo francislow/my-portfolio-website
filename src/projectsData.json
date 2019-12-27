@@ -1,0 +1,12 @@
+{
+    "poofers": {
+        "projectName": "Poofers",
+        "projectDesc": "A 2D android arcade game app",
+        "sourceCodeLink" : "https://github.com/francislow/poofers"
+    },
+    "unmix": {
+        "projectName": "Unmix",
+        "projectDesc": "An android app that allows user to store and manage pictures locally in a separate gallery",
+        "sourceCodeLink" : "https://github.com/francislow/unmix-photo-gallery"
+    }
+}
