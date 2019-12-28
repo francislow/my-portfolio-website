@@ -8,7 +8,7 @@ import linkedin_icon from "./images/linkedin-icon.png";
 function Contact() {
   return (
     <div className="wrapper-page-content contact-page">
-      <p className="page-title m-black-font">CONTACT ME!</p>
+      <p className="page-title">CONTACT ME!</p>
       <ContactForm />
       <div className="wrapper-icons">
         <a

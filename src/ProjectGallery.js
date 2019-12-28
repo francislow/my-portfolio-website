@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import poofersimg from "./images/poofersimg.png";
 import unmiximg from "./images/unmiximg.png";
 import portfoliopageimg from "./images/portfoliopageimg.png";
+import ProjectComponent from "./ProjectComponent";
 
-function PortfolioGallery() {
+function ProjectGallery() {
   function filterSelection(event, filterSelected) {
-    changeActiveButton(event);
+    setActiveButton(event);
 
     let divsToShow;
     if (filterSelected === "all") {
@@ -19,7 +19,7 @@ function PortfolioGallery() {
     showRequestedDivs(divsToShow);
   }
 
-  function changeActiveButton(event) {
+  function setActiveButton(event) {
     // Unset active btn
     const allBtns = document.getElementsByClassName("btn");
     for (let i = 0; i < allBtns.length; i++) {
@@ -29,7 +29,6 @@ function PortfolioGallery() {
     }
     // Set active btn
     event.target.className += " active";
-    console.log(event.target.className);
   }
 
   function hideAllDivs() {
@@ -70,36 +69,36 @@ function PortfolioGallery() {
         </button>
       </div>
       <div className="container">
-        <div className="filter-div photo-frame-container div1 mobile show">
-          <Link to="/project-item/poofers">
-            <img src={poofersimg} alt="poofersimg"/>
-            <div className="overlay">
-              <p className="project-name-text moon-child-font">Poofers</p>
-            </div>
-          </Link>
-        </div>
-
-        <div className="filter-div photo-frame-container div2 mobile show">
-          <Link to="/project-item/unmix">
-            <img src={unmiximg} alt="unmiximg"/>
-            <div className="overlay">
-              <p className="project-name-text moon-child-font">Unmix</p>
-            </div>
-          </Link>
-        </div>
-        <div className="filter-div photo-frame-container div3 web show">
-          <Link to="/project-item/portfolio-website">
-            <img src={portfoliopageimg} alt="portfoliowebimg"/>
-            <div className="overlay">
-              <p className="project-name-text moon-child-font">
-                Portfolio Page
-              </p>
-            </div>
-          </Link>
-        </div>
+        <ProjectComponent
+          specifiedGridDiv="div1"
+          keyId="poofers"
+          img={poofersimg}
+          type="mobile"
+          altImgText="poofersimg"
+          name="Poofers"
+          tools="Native Android"
+        />
+        <ProjectComponent
+          specifiedGridDiv="div2"
+          keyId="unmix"
+          img={unmiximg}
+          type="mobile"
+          altImgText="unmiximg"
+          name="Unmix"
+          tools="Native Android"
+        />
+        <ProjectComponent
+          specifiedGridDiv="div3"
+          keyId="portfolio-website"
+          img={portfoliopageimg}
+          type="web"
+          altImgText="portfoliowebimg"
+          name="Portfolio"
+          tools="React"
+        />
       </div>
     </div>
   );
 }
 
-export default PortfolioGallery;
+export default ProjectGallery;

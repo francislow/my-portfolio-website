@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Home from "./Home";
 import About from "./About";
-import Portfolio from "./Portfolio";
+import Project from "./Project";
 import Contact from "./Contact";
 import Navbar from "./Navbar";
 
 function HomePage() {
+//   useEffect(() => {
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   function handleScroll() {
+//       if () {
+
+//       }
+//       console.log("i scroll u")
+//   }
+
   return (
     <>
+      <div className="fixed-bg">
+        <img src={require("./images/yellowbackground.jpg")} />
+      </div>
       <Navbar />
       <div className="full-height" id="home">
         <Home />
@@ -17,7 +32,7 @@ function HomePage() {
         <About />
       </div>
       <div className="full-height" id="portfolio">
-        <Portfolio />
+        <Project />
       </div>
       <div className="full-height" id="contact">
         <Contact />

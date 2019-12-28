@@ -15,6 +15,17 @@ html {
   outline: none;
 }
 
+.fixed-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.fixed-bg img {
+  width: 100%;
+  height: 100%;
+}
+
 /* FONTS */
 
 @font-face {
@@ -42,7 +53,7 @@ html {
   z-index: 99;
   right: 0;
   font-size: 8vw;
-  color: black;
+  color: white;
   padding: 2vh;
 }
 
@@ -53,11 +64,9 @@ html {
 #collapsible-nav {
   position: fixed;
   z-index: 98;
+  background-color: black;
   width: 100%;
-  left: 0;
-  top: -3vh;
-  margin: 0;
-  background-color: rgba(245, 245, 245, 0.897);
+  border-bottom: 2px solid rgb(255, 30, 79);
 }
 
 #collapsible-nav ul {
@@ -65,16 +74,13 @@ html {
   text-align: center;
 }
 
-#collapsible-nav li:nth-of-type(2n) {
-  border-radius: 10px;
-  background-color: rgba(255, 187, 0, 0.411);
-}
-
 #collapsible-nav li a {
-  font-size: 30px;
-  color: black;
+  font-family: "Raleway";
+  font-size: 15px;
+  color: white;
   margin: 0;
-  line-height: 22vh;
+  line-height: 4vh;
+  text-decoration: none;
 }
 
 /* DESKTOP NAV BAR */
@@ -82,38 +88,33 @@ html {
 #normal-nav {
   position: fixed;
   z-index: 99;
-  right: 1vw;
-  margin: 1vh;
   height: fit-content;
-  width: fit-content;
-  background-color: rgba(224, 224, 224, 0.401);
-  border-radius: 7px;
+  width: 100%;
+  border-bottom: 2px solid rgb(255, 30, 79);
+  background-color: black;
 }
-
 #normal-nav li {
-  margin-top: 1vh;
+  margin-top: 0.5vh;
 }
 
 #normal-nav li a {
+  font-family: "Raleway";
   display: inline;
   margin: 2vw;
   font-size: 1em;
-  color: rgba(0, 0, 0, 0.897);
-  font-style: oblique;
-  transition: font-size 0.2s;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
 /* Navigation bar on hover */
 #normal-nav li a:hover {
-  font-size: 115%;
-  font-weight: bold;
-  background-color: inherit;
+  color: rgb(255, 30, 79);
 }
 
 /* HOME PAGE */
 
 .wrapper-home {
-  background: url("images/yellowbackground.jpg");
   background-size: 100% 100%;
   height: 100%;
 }
@@ -126,18 +127,32 @@ html {
   /* background-color: cornflowerblue; */
 }
 
-.name-text {
+.home-text {
+  /* font-family: moonChildFont; */
+  font-family: "Raleway";
   margin: 0;
   text-align: center;
-  color: black;
-  font-size: 65px;
+  color: white;
+  font-size: 30px;
 }
 
-.welcome-text {
-  text-align: center;
-  color: black;
-  font-size: 20px;
-  margin: 0;
+.name-text {
+  font-size: 50px;
+  color: rgb(255, 30, 79);
+}
+
+#smiley {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  transform: rotate(-20deg);
+  right: 20%;
+  bottom: -20%;
+}
+
+#appear {
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 .wrapper-explore {
@@ -147,26 +162,29 @@ html {
 
 .wrapper-explore a {
   padding: 0.5em;
+  font-family: "Raleway";
   color: whitesmoke;
-  font-size: 30px;
+  font-size: 25px;
   border: white solid 2px;
-  transition: all 0.3s;
+  transition: all 0.7s;
   text-decoration: none;
 }
 
 .wrapper-explore a:hover {
-  background-color: rgb(180, 180, 180, 0.563);
-  border: rgba(180, 180, 180, 0.563) solid 2px;
+  background-color: rgb(255, 30, 79);
+  border: rgb(255, 30, 79) solid 2px;
 }
 
 /* SHARED */
 
 .wrapper-page-content {
   position: relative;
-  padding: 6vh 10vw 4vh 10vw;
+  padding: 10vh 10vw 4vh 10vw;
 }
 
 .page-title {
+  font-family: "Raleway";
+  color: #666;
   font-size: 35px;
 }
 
@@ -178,8 +196,9 @@ html {
 }
 
 .wrapper-intro {
+  font-family: "Open Sans Condensed";
   margin-top: 7vh;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .call-for-action-text {
@@ -242,7 +261,7 @@ html {
   padding: 0;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 20px;
 }
 
 .filter_div {
@@ -277,7 +296,6 @@ html {
 
 .photo-frame-container {
   position: relative;
-  border-radius: 10px;
   /* Make all children fit into this rounded container */
   overflow: hidden;
 }
@@ -287,10 +305,11 @@ html {
   height: 100%;
 
   position: absolute;
+  opacity: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: whitesmoke;
   /* This will set opacity of text too, so no go..
 	background-color: #000000;
 	opacity: 0.3;
@@ -299,59 +318,84 @@ html {
   transition: 0.5s ease;
 }
 
-/* Woww im amazed, how to access into overlay element and change its properties */
 .photo-frame-container:hover .overlay {
-  opacity: 0.7;
-  height: 13%;
+  opacity: 1;
 }
 
-.photo-frame-container:hover .overlay .project-name-text {
-  font-size: 10px;
-}
-
-.photo-frame-container:hover img {
-  /* Do image zoom here */
-  transform: scale(1.07);
-}
-
-.project-name-text {
-  color: white;
-  font-size: 35px;
-
+.wrapper-info {
   /* To center text in overlay */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
+  top: 70%;
+  left: 0%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
-  transition: 0.5s ease;
+  padding: 0.5em;
+  font-family: "Raleway";
+  color: rgb(43, 43, 43);
+  font-size: 15px;
+  border: rgb(255, 30, 79) solid 2px;
+  transition: all 0.5s;
+}
+
+.photo-frame-container:hover .overlay .wrapper-info {
+  left: 50%;
+}
+
+.wrapper-info:hover {
+  color: whitesmoke;
+  background-color: rgb(255, 30, 79);
+}
+
+.photo-frame-container:hover img {
+  transform: scale(1.07);
+}
+
+.project-text {
+  color: black;
+  font-size: 28px;
+  font-family: moonChildFont;
+
+  /* To center text in overlay */
+  position: absolute;
+  top: 30%;
+  left: 100%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+
+.main-tools {
+  font-family: "Raleway";
+  font-size: 10px;
+  line-height: 0em;
+  font-style: oblique;
+  color: grey;
+}
+
+.photo-frame-container:hover .overlay .project-text {
+  left: 50%;
 }
 
 .photo-frame-container img {
   width: 100%;
   height: 100%;
-
-  /* Do image zoom transition here */
   transition: 0.3s ease;
-  /*
-	transition: transform .25s, visibility .25s ease-in;
-	*/
 }
 
 /* CONTACT */
 
 .contact-page {
-  background-image: url(./images/yellowbackground.jpg);
   background-size: 100% 100%;
   height: 100%;
 }
 
 .wrapper-form {
   margin-top: 2vh;
-  height: 60vh;
+  height: 55vh;
 }
 
 /* Prevent google autocomplete to change background to white */
@@ -382,7 +426,7 @@ input:-webkit-autofill:active {
 
 .form-message {
   background-color: rgb(255, 247, 204);
-  height: 30vh;
+  height: 25vh;
   margin-top: 3vh;
 }
 
@@ -596,32 +640,23 @@ input:-webkit-autofill:active {
     grid-column: 3 / 4;
   }
 
-  .name-text {
-    margin: 0;
-    font-size: 100px;
+  .wrapper-home-content {
+    top: 27vh;
+    /* background-color: cornflowerblue; */
+  }
+
+  .home-text {
+    font-size: 40px;
     /* background-color: yellow; */
-  }
-
-  .welcome-text {
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    margin: 0;
-    /* background-color: red; */
-  }
-
-  .project-name-text {
-    color: white;
-    font-size: 50px;
-  }
-
-  .photo-frame-container:hover .overlay .project-name-text {
-    font-size: 20px;
   }
 
   .wrapper-form {
     padding-left: 20vw;
     padding-right: 20vw;
+  }
+
+  .name-text:hover ~ #appear {
+    opacity: 1;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */

@@ -4,10 +4,17 @@ function Home() {
   return (
     <div className="wrapper-home">
       <div className="wrapper-home-content">
-        <p className="name-text moon-child-font">Hi, I'm Francis</p>
-        <p className="welcome-text m-black-font">WELCOME TO MY PAGE!</p>
+        <p className="home-text">
+          Hello, I'm <span className="name-text">Francis</span>
+          <span id="appear">
+            <img id="smiley" src={require("./images/smiley.png")} />
+          </span>
+          <br />I love to create apps!
+        </p>
         <div className="wrapper-explore moon-child-font">
-          <a href="#about" target="_self">Explore</a>
+          <a href="#about">
+            Explore
+          </a>
           {/* <img className="explore-arrow" src={explorearrow} alt="Explore Arrow"/> */}
         </div>
       </div>

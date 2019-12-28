@@ -6,11 +6,11 @@ function About() {
   return (
     <>
       <div className="wrapper-page-content about-page">
-        <p className="page-title m-black-font">ABOUT ME!</p>
+        <p className="page-title">ABOUT</p>
         <img className="profile-img desktop-only" src={mypicture} alt="profilepic" />
         <img className="smiley-img mobile-only" src={smiley} alt="smiley" />
         <div className="wrapper-intro">
-          <p className="moon-child-font">
+          <p>
             I am a student from{" "}
             <a
               target="_blank"
