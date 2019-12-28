@@ -31,7 +31,7 @@ function HomePage() {
       <div className="full-height" id="about">
         <About />
       </div>
-      <div className="full-height" id="portfolio">
+      <div className="full-height" id="projects">
         <Project />
       </div>
       <div className="full-height" id="contact">

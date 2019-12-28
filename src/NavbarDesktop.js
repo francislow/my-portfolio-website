@@ -11,7 +11,7 @@ function NavbarDesktop() {
           <a href="#about">ABOUT</a>
         </li>
         <li>
-          <a href="#portfolio">PORTFOLIO</a>
+          <a href="#projects">PROJECTS</a>
         </li>
         <li>
           <a href="#contact">CONTACT</a>

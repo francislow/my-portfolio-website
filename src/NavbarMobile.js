@@ -9,7 +9,7 @@ function NavbarMobile() {
           <ul className="nav navbar-nav">
             <NavbarMobileItem name="HOME" ref_id="#home" />
             <NavbarMobileItem name="ABOUT" ref_id="#about" />
-            <NavbarMobileItem name="PORTFOLIO" ref_id="#portfolio" />
+            <NavbarMobileItem name="PROJECTS" ref_id="#projects" />
             <NavbarMobileItem name="CONTACT" ref_id="#contact" />
           </ul>
         </nav>
