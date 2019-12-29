@@ -7,7 +7,11 @@ function About() {
     <>
       <div className="wrapper-page-content about-page">
         <p className="page-title">ABOUT</p>
-        <img className="profile-img desktop-only" src={mypicture} alt="profilepic" />
+        <img
+          className="profile-img desktop-only"
+          src={mypicture}
+          alt="profilepic"
+        />
         <img className="smiley-img mobile-only" src={smiley} alt="smiley" />
         <div className="wrapper-intro">
           <p>

@@ -6,9 +6,10 @@ function ContactForm() {
   const [senderEmail, setSenderEmail] = useState("");
   const [senderSubject, setSenderSubject] = useState("");
 
-  function handleSubmit() {
-    const templateId = "template_KeL9SE3G";
+  function handleSubmit(e) {
+    e.preventDefault()
 
+    const templateId = "template_KeL9SE3G";
     sendFeedBack(templateId, {
       message_html: senderMsg,
       subject_html: senderSubject,
@@ -33,7 +34,7 @@ function ContactForm() {
   }
 
   function refreshPage() {
-    window.location.reload(false);
+    window.location.href = "http://francislow.netlify.com/";
   }
 
   return (
@@ -70,7 +71,7 @@ function ContactForm() {
         <button
           className="send-email-btn"
           type="submit"
-          onClick={() => handleSubmit()}
+          onClick={(e) => handleSubmit(e)}
         >
           Send email
         </button>
