@@ -446,6 +446,45 @@ input:-webkit-autofill:active {
   transform: rotate(7deg);
 }
 
+.email-model-box {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 5px;
+  background-color: rgba(255, 246, 166, 0.575);
+  font-family: "Raleway";
+  font-size: 14px;
+  
+}
+
+.email-model-box span {
+  color: #727272;
+  line-height: 30px;
+  float: right;
+  font-size: 20px;
+}
+
+.email-model-box span:hover,
+.email-model-box span:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.visible {
+  display: initial;
+}
+
+.invisible {
+  display: none;
+}
+
 /* PROJECT ITEM PAGE */
 .wrapper-item-page {
   background-image: url(./images/yellowbackground.jpg);
