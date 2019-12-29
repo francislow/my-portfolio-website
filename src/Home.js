@@ -7,7 +7,7 @@ function Home() {
         <p className="home-text">
           Hello, I'm <span className="name-text">Francis</span>
           <span id="appear">
-            <img id="smiley" src={require("./images/smiley.png")} />
+            <img id="smiley" src={require("./images/smiley.png")}  alt="smileyimg" />
           </span>
           <br />I love to create apps!
         </p>

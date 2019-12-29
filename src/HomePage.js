@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import Home from "./Home";
 import About from "./About";
@@ -22,7 +22,7 @@ function HomePage() {
   return (
     <>
       <div className="fixed-bg">
-        <img src={require("./images/yellowbackground.jpg")} />
+        <img src={require("./images/yellowbackground.jpg")} alt="fixed-bg" />
       </div>
       <Navbar />
       <div className="full-height" id="home">

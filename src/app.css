@@ -156,7 +156,7 @@ html {
 }
 
 .wrapper-explore {
-  margin-top: 20vh;
+  margin-top: 16vh;
   text-align: center;
 }
 
@@ -302,10 +302,10 @@ html {
 
 .overlay {
   width: 100%;
-  height: 100%;
+  height: 25%;
 
   position: absolute;
-  opacity: 0;
+  opacity: 1;
   bottom: 0;
   left: 0;
   right: 0;
@@ -318,15 +318,11 @@ html {
   transition: 0.5s ease;
 }
 
-.photo-frame-container:hover .overlay {
-  opacity: 1;
-}
-
 .wrapper-info {
   /* To center text in overlay */
   position: absolute;
-  top: 70%;
-  left: 0%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -334,33 +330,21 @@ html {
   padding: 0.5em;
   font-family: "Raleway";
   color: rgb(43, 43, 43);
-  font-size: 15px;
-  border: rgb(255, 30, 79) solid 2px;
+  font-size: 7px;
+  border: rgb(255, 30, 79) solid 1px;
   transition: all 0.5s;
 }
 
-.photo-frame-container:hover .overlay .wrapper-info {
-  left: 50%;
-}
-
-.wrapper-info:hover {
-  color: whitesmoke;
-  background-color: rgb(255, 30, 79);
-}
-
-.photo-frame-container:hover img {
-  transform: scale(1.07);
-}
-
 .project-text {
+  display: none;
   color: black;
-  font-size: 28px;
+  font-size: 17px;
   font-family: moonChildFont;
 
   /* To center text in overlay */
   position: absolute;
-  top: 30%;
-  left: 100%;
+  top: 50%;
+  left: 50%;
   text-align: center;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -369,15 +353,13 @@ html {
 }
 
 .main-tools {
+  display: initial;
+  display: none;
   font-family: "Raleway";
   font-size: 10px;
   line-height: 0em;
   font-style: oblique;
   color: grey;
-}
-
-.photo-frame-container:hover .overlay .project-text {
-  left: 50%;
 }
 
 .photo-frame-container img {
@@ -657,6 +639,49 @@ input:-webkit-autofill:active {
 
   .name-text:hover ~ #appear {
     opacity: 1;
+  }
+
+  .photo-frame-container:hover .overlay {
+    opacity: 1;
+  }
+
+  .overlay {
+    height: 100%;
+    opacity: 0;
+  }
+
+  .wrapper-info {
+    top: 70%;
+    left: 0%;
+    font-size: 15px;
+  }
+
+  .project-text {
+    display: initial;
+    top: 30%;
+    left: 100%;
+    font-size: 28px;
+  }
+
+  .main-tools {
+    display: block;
+  }
+
+  .photo-frame-container:hover .overlay .wrapper-info {
+    left: 50%;
+  }
+
+  .wrapper-info:hover {
+    color: whitesmoke;
+    background-color: rgb(255, 30, 79);
+  }
+
+  .photo-frame-container:hover img {
+    transform: scale(1.07);
+  }
+
+  .photo-frame-container:hover .overlay .project-text {
+    left: 50%;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */

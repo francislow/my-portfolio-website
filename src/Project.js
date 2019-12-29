@@ -5,7 +5,7 @@ import Header from "./Header";
 function Project() {
   return (
     <div className="wrapper-page-content portfolio-page">
-      <Header title="PROJECTS"/>
+      <Header title="GALLERY"/>
       <ProjectGallery />
     </div>
   );
