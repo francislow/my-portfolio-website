@@ -9,7 +9,7 @@ function ContactForm() {
   function handleSubmit() {
     const templateId = "template_KeL9SE3G";
 
-    sendFeedback(templateId, {
+    sendFeedBack(templateId, {
       message_html: senderMsg,
       subject_html: senderSubject,
       from_name: senderName,
@@ -17,11 +17,12 @@ function ContactForm() {
     });
   }
 
-  function sendFeedback(templateId, variables) {
+  function sendFeedBack(templateId, variables) {
     window.emailjs
       .send("gmail", templateId, variables)
       .then(res => {
         console.log("Email successfully sent!");
+        refreshPage();
       })
       .catch(err =>
         console.error(
@@ -31,42 +32,50 @@ function ContactForm() {
       );
   }
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
-      <div className="wrapper-form">
-        <form>
-          <input
-            className="form-detail"
-            type="text"
-            placeholder="Full Name"
-            onChange={e => setSenderName(e.target.value)}
-            value={senderName}
-          />
-          <input
-            className="form-detail"
-            type="text"
-            placeholder="Email"
-            onChange={e => setSenderEmail(e.target.value)}
-            value={senderEmail}
-          />
-          <input
-            className="form-detail"
-            type="text"
-            placeholder="Subject"
-            onChange={e => setSenderSubject(e.target.value)}
-            value={senderSubject}
-          />
-          <textarea
-            className="form-detail form-message"
-            type="text"
-            placeholder="Message"
-            onChange={e => setSenderMsg(e.target.value)}
-            value={senderMsg}
-          />
-          <button className="send-email-btn" type="submit" onClick={() => handleSubmit()}>
-            Send email
-          </button>
-        </form>
-      </div>
+    <div className="wrapper-form">
+      <form>
+        <input
+          className="form-detail"
+          type="text"
+          placeholder="Full Name"
+          onChange={e => setSenderName(e.target.value)}
+          value={senderName}
+        />
+        <input
+          className="form-detail"
+          type="text"
+          placeholder="Email"
+          onChange={e => setSenderEmail(e.target.value)}
+          value={senderEmail}
+        />
+        <input
+          className="form-detail"
+          type="text"
+          placeholder="Subject"
+          onChange={e => setSenderSubject(e.target.value)}
+          value={senderSubject}
+        />
+        <textarea
+          className="form-detail form-message"
+          type="text"
+          placeholder="Message"
+          onChange={e => setSenderMsg(e.target.value)}
+          value={senderMsg}
+        />
+        <button
+          className="send-email-btn"
+          type="submit"
+          onClick={() => handleSubmit()}
+        >
+          Send email
+        </button>
+      </form>
+    </div>
   );
 }
 
