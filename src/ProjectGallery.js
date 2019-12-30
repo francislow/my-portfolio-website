@@ -50,19 +50,19 @@ function ProjectGallery() {
     <div className="wrapper-portfolio-gallery">
       <div className="wrapper-buttons">
         <button
-          className="btn active moon-child-font"
+          className="btn active"
           onClick={event => filterSelection(event, "all")}
         >
           Show all
         </button>
         <button
-          className="btn moon-child-font"
+          className="btn"
           onClick={event => filterSelection(event, "mobile")}
         >
           Mobile
         </button>
         <button
-          className="btn moon-child-font"
+          className="btn"
           onClick={event => filterSelection(event, "web")}
         >
           Web

@@ -52,7 +52,6 @@ function ContactForm() {
       "visible",
       "invisible"
     )
-
   }
 
   function refreshPage() {

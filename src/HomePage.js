@@ -28,7 +28,7 @@ function HomePage() {
       <div className="full-height" id="home">
         <Home />
       </div>
-      <div className="full-height" id="about">
+      <div id="about">
         <About />
       </div>
       <div className="full-height" id="projects">
