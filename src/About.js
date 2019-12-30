@@ -35,14 +35,14 @@ function About() {
           <div className="wrapper-skills-content">
             <p>TECHNICAL SKILLS</p>
             <div className="skills-container">
-              <div class="flex-item">Android</div>
-              <div class="flex-item">Android SDK</div>
-              <div class="flex-item">Java</div>
-              <div class="flex-item">Kotlin</div>
-              <div class="flex-item">JavaScript</div>
-              <div class="flex-item">HTML5</div>
-              <div class="flex-item">CSS3</div>
-              <div class="flex-item">React</div>
+              <div>Android</div>
+              <div>Android SDK</div>
+              <div>Java</div>
+              <div>Kotlin</div>
+              <div>JavaScript</div>
+              <div>HTML5</div>
+              <div>CSS3</div>
+              <div>React</div>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ html {
 
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800i&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600,800i&display=swap");
 
 @font-face {
   font-family: mBlackFont;
@@ -208,8 +208,6 @@ html {
 }
 
 .wrapper-skills-content {
-  height: fit-content;
-
   position: absolute;
   left: 50%;
   bottom: 4%;
@@ -226,9 +224,13 @@ html {
   font-weight: 600;
   font-size: 13px;
   width: fit-content;
+  height: fit-content;
   padding-top: 5px;
+}
 
-  background-color: darkmagenta;
+.wrapper-skills-content p {
+  border: 2px solid black;
+  padding: 1px 5px 1px 5px;
 }
 
 .skills-container {
@@ -241,21 +243,18 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   width: 60%;
-  background-color: darkkhaki;
 }
 
-.flex-item {
+.skills-container div {
   margin: 6px;
   padding: 1px 8px 1px 8px;
   flex-basis: fit-content;
   color: white;
   border-radius: 6px;
   background-color: rgb(255, 79, 79);
-  
 }
 
 .wrapper-profile-intro {
-  background-color: darkgoldenrod;
   position: relative;
   font-family: "Raleway";
   padding: 90px 70px 160px 70px;
@@ -266,7 +265,6 @@ html {
 }
 
 .intro-header {
-  background-color: darkgreen;
   font-family: "Raleway";
   font-weight: 600;
   margin-top: -40px;
@@ -420,6 +418,29 @@ html {
   width: 100%;
   height: 100%;
   transition: 0.3s ease;
+}
+
+.wrapper-project-model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(59, 59, 59, 0.555);
+}
+
+.wrapper-project-model div {
+  position: absolute;
+  left: 50%;
+  top: 53%;
+  padding-bottom: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  height: 80%;
+  width: 80%;
+  background-color: white;
 }
 
 /* CONTACT */
@@ -713,15 +734,10 @@ input:-webkit-autofill:active {
   .wrapper-profile-intro {
     font-size: 14px;
   }
-  
+
   .intro-header {
     font-size: 46px;
   }
-
-  /* .wrapper-profile-skills {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-  } */
 
   .wrapper-profile-intro {
     grid-column: 2 / 3;
@@ -824,7 +840,7 @@ input:-webkit-autofill:active {
   .wrapper-profile-intro {
     font-size: 15px;
   }
-  
+
   .intro-header {
     margin-top: -40px;
     font-size: 55px;
@@ -843,7 +859,7 @@ input:-webkit-autofill:active {
   .wrapper-profile-intro {
     font-size: 17px;
   }
-  
+
   .intro-header {
     margin-top: -40px;
     font-size: 55px;
