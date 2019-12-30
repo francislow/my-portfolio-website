@@ -65,7 +65,7 @@ function ContactForm() {
           <input
             className="form-detail"
             type="text"
-            placeholder="Full Name"
+            placeholder="Name"
             onChange={e => setSenderName(e.target.value)}
             value={senderName}
           />
