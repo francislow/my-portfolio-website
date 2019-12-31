@@ -366,7 +366,7 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgb(255, 242, 208);
+  background: rgba(54, 54, 54, 0.562);
 
   /* This will set opacity of text too, so no go..
 	background-color: #000000;
@@ -387,9 +387,9 @@ html {
 
   padding: 0.5em;
   font-family: "Raleway";
-  color: rgb(43, 43, 43);
+  color: white;
   font-size: 7px;
-  border: rgb(255, 30, 79) solid 1px;
+  
   transition: all 0.5s;
 }
 
@@ -438,10 +438,10 @@ html {
 }
 
 .wrapper-project-model .content {
-  box-shadow: 3px 3px #ff57579d;
+  box-shadow: 3px 3px #ff6161;
   position: absolute;
   left: 50%;
-  top: 53%;
+  top: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -955,11 +955,14 @@ input:-webkit-autofill:active {
   }
 
   .overlay {
+    background: rgb(255, 242, 208);
     height: 100%;
     opacity: 0;
   }
 
   .wrapper-info {
+    color: rgb(43, 43, 43);
+    border: rgb(255, 30, 79) solid 1px;
     top: 70%;
     left: 0%;
     font-size: 15px;
