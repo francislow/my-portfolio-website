@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import poofersimg from "./images/poofersimg.png";
 import unmiximg from "./images/unmiximg.png";
@@ -6,9 +6,11 @@ import portfoliopageimg from "./images/portfoliopageimg.png";
 import ProjectComponent from "./ProjectComponent";
 
 function ProjectGallery() {
-  function filterSelection(event, filterSelected) {
-    setActiveButton(event);
+  const [firstBtnActivity, setFirstBtnActivity] = useState("active");
+  const [secondBtnActivity, setSecondBtnActivity] = useState("inactive");
+  const [thirdBtnActivity, setThirdBtnActivity] = useState("inactive");
 
+  function filterSelection(filterSelected) {
     let divsToShow;
     if (filterSelected === "all") {
       divsToShow = document.getElementsByClassName("filter-div");
@@ -17,18 +19,6 @@ function ProjectGallery() {
     }
     hideAllDivs();
     showRequestedDivs(divsToShow);
-  }
-
-  function setActiveButton(event) {
-    // Unset active btn
-    const allBtns = document.getElementsByClassName("btn");
-    for (let i = 0; i < allBtns.length; i++) {
-      if (allBtns[i].className.includes("active")) {
-        allBtns[i].className = allBtns[i].className.replace(" active", "");
-      }
-    }
-    // Set active btn
-    event.target.className += " active";
   }
 
   function hideAllDivs() {
@@ -50,20 +40,35 @@ function ProjectGallery() {
     <div className="wrapper-portfolio-gallery">
       <div className="wrapper-buttons">
         <button
-          className="btn active"
-          onClick={event => filterSelection(event, "all")}
+          className={`btn ${firstBtnActivity}`}
+          onClick={() => {
+            setFirstBtnActivity("active");
+            setSecondBtnActivity("inactive");
+            setThirdBtnActivity("inactive");
+            filterSelection("all");
+          }}
         >
           Show all
         </button>
         <button
-          className="btn"
-          onClick={event => filterSelection(event, "mobile")}
+          className={`btn ${secondBtnActivity}`}
+          onClick={() => {
+            setFirstBtnActivity("inactive");
+            setSecondBtnActivity("active");
+            setThirdBtnActivity("inactive");
+            filterSelection("mobile");
+          }}
         >
           Mobile
         </button>
         <button
-          className="btn"
-          onClick={event => filterSelection(event, "web")}
+          className={`btn ${thirdBtnActivity}`}
+          onClick={() => {
+            setFirstBtnActivity("inactive");
+            setSecondBtnActivity("inactive");
+            setThirdBtnActivity("active");
+            filterSelection("web");
+          }}
         >
           Web
         </button>

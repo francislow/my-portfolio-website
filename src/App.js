@@ -1,19 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import HomePage from "./HomePage.js";
-import ProjectItemPage from "./ProjectItemPage.js";
+import Home from "./Home";
+import About from "./About";
+import Project from "./Project";
+import Contact from "./Contact";
+import Navbar from "./Navbar";
 
 import "./app.css";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/project-item/:key" component={ProjectItemPage} />
-      </Switch>
-    </Router>
+    <>
+      <div className="fixed-bg">
+        <img src={require("./images/yellowbackground.jpg")} alt="fixed-bg" />
+      </div>
+      <Navbar />
+      <div className="full-height" id="home">
+        <Home />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div className="full-height" id="projects">
+        <Project />
+      </div>
+      <div className="full-height" id="contact">
+        <Contact />
+      </div>
+    </>
   );
 }
 
