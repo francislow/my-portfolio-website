@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 function ContactForm() {
   const [senderName, setSenderName] = useState("");
@@ -7,7 +7,8 @@ function ContactForm() {
   const [senderSubject, setSenderSubject] = useState("");
   const [modelBoxText, setModelBoxText] = useState("");
 
-  const modelRef = useRef(null);
+  const [modelVisibility, setModelVisiblility] = useState("invisible");
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -33,29 +34,17 @@ function ContactForm() {
           "Oh well, you failed. Here some thoughts on the error that occured:",
           err
         );
-        activateResultNotification("Error, email was not sent successfully");
+        activateResultNotification("Error, email was not sent successfully.");
       });
   }
 
   function activateResultNotification(displayText) {
     setModelBoxText(displayText);
-    setModelVisibility(true);
-  }
-
-  function setModelVisibility(isVisible) {
-    isVisible ? 
-    modelRef.current.className = modelRef.current.className.replace(
-      "invisible",
-      "visible"
-    ) : 
-    modelRef.current.className = modelRef.current.className.replace(
-      "visible",
-      "invisible"
-    )
+    setModelVisiblility("visible");
   }
 
   function refreshPage() {
-    window.location.href = "https://francislow.netlify.com/#contact"
+    window.location.href = "https://francislow.netlify.com/#contact";
   }
 
   return (
@@ -99,8 +88,8 @@ function ContactForm() {
           </button>
         </form>
       </div>
-      <div ref={modelRef} className="email-model-box invisible">
-        <span onClick={() => setModelVisibility(false)}>&times;</span>
+      <div className={`email-model-box ${modelVisibility}`}>
+        <span onClick={() => setModelVisiblility("invisible")}>&times;</span>
         {modelBoxText}
       </div>
     </>
