@@ -229,7 +229,7 @@ html {
 }
 
 .wrapper-skills-content p {
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 1px 5px 1px 5px;
 }
 
@@ -268,7 +268,7 @@ html {
   font-family: "Raleway";
   font-weight: 600;
   margin-top: -40px;
-  font-size: 55px;
+  font-size: 40px;
 }
 
 /* PORTFOLIO */
@@ -286,6 +286,7 @@ html {
 .btn {
   border-radius: 0;
   font-family: "Raleway";
+  font-weight: 600;
   font-size: 12px;
   border: none;
   text-decoration: none;
@@ -389,7 +390,7 @@ html {
   font-family: "Raleway";
   color: white;
   font-size: 7px;
-  
+
   transition: all 0.5s;
 }
 
@@ -462,8 +463,9 @@ html {
   flex: 4;
 }
 
-.flex-1 img {
-  height: 80%;
+.flex-1 .display-img {
+  height: 100%;
+  width: 100%;
 
   position: absolute;
   left: 50%;
@@ -474,15 +476,13 @@ html {
 }
 
 .flex-2 {
-  position: relative;
   flex: 1;
-  font-family: "Raleway";
-  font-weight: 600;
-  font-size: 20px;
-  text-align: center;
+  position: relative;
 }
 
 .flex-2 div {
+  color: grey;
+  font-size: 11px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -491,7 +491,58 @@ html {
   transform: translate(-50%, -50%);
 }
 
+.flex-2 .left-arrow {
+  opacity: 0.5;
+  height: 20%;
+  z-index: 101;
+  transition: all 0.3s;
+
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.flex-2 .right-arrow {
+  opacity: 0.5;
+  height: 20%;
+  z-index: 101;
+  transition: all 0.3s;
+
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  -webkit-transform: translate(+50%, -50%);
+  -ms-transform: translate(+50%, -50%);
+  transform: translate(+50%, -50%);
+}
+
+.flex-2 .right-arrow:hover,
+.flex-2 .left-arrow:hover {
+  opacity: 1;
+}
+
 .flex-3 {
+  position: relative;
+  flex: 1;
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+.flex-3 div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.flex-4 {
   padding-left: 30px;
   padding-right: 30px;
   font-size: 12px;
@@ -499,7 +550,7 @@ html {
   flex: 3;
 }
 
-.flex-4 {
+.flex-5 {
   flex: 1;
 
   /* Fonts */
@@ -509,7 +560,7 @@ html {
   position: relative;
 }
 
-.flex-4 .wrapper-dev-tools {
+.flex-5 .wrapper-dev-tools {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -525,7 +576,7 @@ html {
   justify-content: center;
 }
 
-.flex-4 .wrapper-dev-tools div {
+.flex-5 .wrapper-dev-tools div {
   margin: 3px;
   padding: 1px 8px 1px 8px;
   flex-basis: fit-content;
@@ -535,7 +586,7 @@ html {
   background-color: rgb(255, 79, 79);
 }
 
-.flex-5 {
+.flex-6 {
   /* center anchor region */
   display: flex;
   align-items: center;
@@ -543,25 +594,25 @@ html {
   flex: 1;
 }
 
-.flex-5 a img {
+.flex-6 a img {
   height: 40px;
   width: 100px;
 
   transition: all 0.3s;
 }
 
-.flex-5 a img:hover {
+.flex-6 a img:hover {
   transform: scale(1.05);
 }
 
-.flex-6 {
+.flex-7 {
   border-top: 1px solid rgba(182, 182, 182, 0.575);
   flex: 1;
 
   position: relative;
 }
 
-.flex-6 div {
+.flex-7 div {
   font-size: 11px;
   display: inline;
   padding: 5px;
@@ -575,7 +626,7 @@ html {
   transform: translateY(-50%);
 }
 
-.flex-6 div a {
+.flex-7 div a {
   font-family: monospace;
   font-weight: bold;
   color: rgb(146, 146, 146);
@@ -584,11 +635,11 @@ html {
   transition: all 0.5s;
 }
 
-.flex-6 div a:hover {
+.flex-7 div a:hover {
   color: black;
 }
 
-.flex-6 .close-btn {
+.flex-7 .close-btn {
   font-family: "Raleway";
   font-weight: 400;
   color: #a7a7a7;
@@ -604,10 +655,9 @@ html {
   transform: translateY(-50%);
 }
 
-.flex-6 .close-btn:hover {
+.flex-7 .close-btn:hover {
   color: black;
 }
-
 
 /* CONTACT */
 
@@ -828,17 +878,6 @@ input:-webkit-autofill:active {
   height: 100%;
   width: 100%;
   text-align: center;
-}
-
-.nav-arrow {
-  margin: 25px;
-  width: 25px;
-  height: 25px;
-  transition: all 0.3s;
-}
-
-.nav-arrow:hover {
-  transform: scale(1.1);
 }
 
 .item-img {

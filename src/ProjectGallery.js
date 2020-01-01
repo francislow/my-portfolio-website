@@ -48,7 +48,7 @@ function ProjectGallery() {
             filterSelection("all");
           }}
         >
-          Show all
+          ALL
         </button>
         <button
           className={`btn ${secondBtnActivity}`}
@@ -59,7 +59,7 @@ function ProjectGallery() {
             filterSelection("mobile");
           }}
         >
-          Mobile
+          MOBILE
         </button>
         <button
           className={`btn ${thirdBtnActivity}`}
@@ -70,7 +70,7 @@ function ProjectGallery() {
             filterSelection("web");
           }}
         >
-          Web
+          WEB
         </button>
       </div>
       <div className="container">
