@@ -264,6 +264,16 @@ html {
   font-size: 16px;
 }
 
+.wrapper-profile-intro p a {
+  text-decoration: none;
+  color: rgb(12, 166, 238);
+  transition: all 0.4s;
+}
+
+.wrapper-profile-intro p a:hover {
+  color: rgb(0, 106, 155);
+}
+
 .intro-header {
   font-family: "Raleway";
   font-weight: 600;
