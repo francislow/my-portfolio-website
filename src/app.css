@@ -314,6 +314,7 @@ html {
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   height: 55vh;
   width: 250px;
   max-width: 100%;
@@ -901,6 +902,7 @@ input:-webkit-autofill:active {
   }
 
   .wrapper-profile-intro {
+    padding: 90px 30px 230px 30px;
     font-size: 11px;
   }
 
