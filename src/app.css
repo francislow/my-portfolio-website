@@ -722,6 +722,10 @@ input:-webkit-autofill:active {
   transition: all 0.2s ease-in;
 }
 
+.send-email-btn:focus {
+  outline: none;
+}
+
 .send-email-btn:hover {
   font-size: 12.2px;
   transform: scale(1.05);
