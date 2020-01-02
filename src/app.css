@@ -683,10 +683,19 @@ input:-webkit-autofill:active {
   background-color: rgb(255, 247, 204);
   display: block;
   width: 100%;
-  border: none;
+  border: 2px transparent solid;
   padding: 3px;
   margin-top: 5px;
 }
+
+.red {
+  border: 2px red solid;
+}
+
+.red::placeholder {
+  color: red;
+}
+
 
 .form-detail::placeholder {
   font-family: "Raleway";
@@ -705,15 +714,17 @@ input:-webkit-autofill:active {
 .send-email-btn {
   font-family: "Raleway";
   color: white;
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(97, 97, 97);
   border: none;
   padding: 5px 10px;
+  font-size: 12px;
   margin-top: 3vh;
-  transition: all 0.3s;
+  transition: all 0.2s ease-in;
 }
 
 .send-email-btn:hover {
-  transform: scale(1.1);
+  font-size: 12.2px;
+  transform: scale(1.05);
 }
 
 .wrapper-icons {
