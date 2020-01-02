@@ -312,36 +312,28 @@ html {
 }
 
 .container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   height: 55vh;
-  width: 100%;
+  width: 250px;
+  max-width: 100%;
   margin-top: 4vh;
   padding: 0;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
-
-.filter_div {
-  color: #ffffff;
-  /* Center text */
-  line-height: 130px; /* Line height to fit container row and column px */
-  text-align: center;
 }
 
 .div1 {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  flex-basis: 30%;
+  margin: 5px;
 }
 
 .div2 {
-  grid-column-start: 3;
-  grid-column-end: 5;
+  flex-basis: 30%;
+  margin: 5px;
 }
 
 .div3 {
-  grid-column-start: 2;
-  grid-column-end: 4;
+  flex-basis: 30%;
+  margin: 5px;
 }
 
 .filter-div.show {
@@ -908,6 +900,14 @@ input:-webkit-autofill:active {
     display: initial;
   }
 
+  .wrapper-profile-intro {
+    font-size: 11px;
+  }
+
+  .intro-header {
+    font-size: 34px;
+  }
+
   .desktop-only {
     display: none;
   }
@@ -918,9 +918,18 @@ input:-webkit-autofill:active {
     display: initial;
   }
 
+  .wrapper-profile-intro {
+    font-size: 13px;
+  }
+
+  .intro-header {
+    font-size: 42px;
+  }
+
   .desktop-only {
     display: none;
   }
+  
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -952,7 +961,7 @@ input:-webkit-autofill:active {
   }
 
   .wrapper-profile-intro {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .intro-header {
@@ -965,24 +974,24 @@ input:-webkit-autofill:active {
   }
 
   .container {
-    display: grid;
-    height: 40vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 45vh;
+    width: 80vw;
+    max-width: 80vw;
     margin-top: 7vh;
-    padding: 0;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .div1 {
-    grid-column: 1 / 2;
+    flex-basis: 30%;
   }
 
   .div2 {
-    grid-column: 2 / 3;
+    flex-basis: 30%;
   }
 
   .div3 {
-    grid-column: 3 / 4;
+    flex-basis: 30%;
   }
 
   .wrapper-home-content {
