@@ -246,6 +246,7 @@ html {
 }
 
 .skills-container div {
+  font-size: 8px;
   margin: 6px;
   padding: 1px 8px 1px 8px;
   flex-basis: fit-content;

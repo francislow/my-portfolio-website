@@ -43,6 +43,10 @@ function About() {
               <div>HTML5</div>
               <div>CSS3</div>
               <div>React</div>
+              <div>Node.js</div>
+              <div>Express</div>
+              <div>REST API</div>
+              <div>MongoDB</div>
             </div>
           </div>
         </div>
