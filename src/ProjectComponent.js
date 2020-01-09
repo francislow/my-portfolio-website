@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import ProjectModelBox from "./ProjectModelBox";
 
 function ProjectComponent(props) {

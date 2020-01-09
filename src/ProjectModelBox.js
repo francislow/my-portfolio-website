@@ -2,27 +2,29 @@ import React, { useState } from "react";
 
 import * as projectsData from "./projectsData.json";
 
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 function ProjectModelBox(props) {
   // All images (load all images here to solve the require() problem as static paths are required)
   const projectImgsHolder = {
     poofers: [
-      require("./images/pooferitem.png"),
-      require("./images/poofer-img-1.png"),
-      require("./images/poofer-img-2.png"),
-      require("./images/poofer-img-3.png"),
-      require("./images/poofer-img-4.png")
+      {id: 1, url: require("./images/pooferitem.png")},
+      {id: 2, url: require("./images/poofer-img-1.png")},
+      {id: 3, url: require("./images/poofer-img-2.png")},
+      {id: 4, url: require("./images/poofer-img-3.png")},
+      {id: 5, url: require("./images/poofer-img-4.png")}
     ],
     unmix: [
-      require("./images/unmixitem.png"),
-      require("./images/unmix-img-1.png"),
-      require("./images/unmix-img-2.png"),
-      require("./images/unmix-img-3.png")
+      {id: 6, url: require("./images/unmixitem.png")},
+      {id: 7, url: require("./images/unmix-img-1.png")},
+      {id: 8, url: require("./images/unmix-img-2.png")},
+      {id: 9, url: require("./images/unmix-img-3.png")}
     ],
     "portfolio-website": [
-      require("./images/port-web-img-1.png"),
-      require("./images/port-web-img-2.png"),
-      require("./images/port-web-img-3.png"),
-      require("./images/port-web-img-4.png")
+      {id: 10, url: require("./images/port-web-img-1.png")},
+      {id: 11, url: require("./images/port-web-img-2.png")},
+      {id: 12, url: require("./images/port-web-img-3.png")},
+      {id: 13, url: require("./images/port-web-img-4.png")}
     ]
   };
 
@@ -36,6 +38,7 @@ function ProjectModelBox(props) {
   const projectImgs = projectImgsHolder[keyID];
 
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  // const [appear, setAppear] = useState(true);
 
   function setNextImg() {
     let newIndex =
@@ -58,7 +61,11 @@ function ProjectModelBox(props) {
     <div className={`wrapper-project-model ${props.visibility}`}>
       <div className="content">
         <div className="flex-1">
-          <img className="display-img" src={projectImgs[currentImgIndex]} alt="projectimg" />
+          <TransitionGroup>
+            <CSSTransition key={projectImgs[currentImgIndex].id} timeout={400} classNames="fade">
+              <img className="display-img" src={projectImgs[currentImgIndex].url} alt="projectimg" />
+            </CSSTransition>
+          </TransitionGroup>
         </div>
         <div className="flex-2">
           <img onClick={setPrevImg} className="left-arrow" src={require("./images/leftarrow.png")} />

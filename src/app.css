@@ -479,6 +479,37 @@ html {
   transform: translate(-50%, -50%);
 }
 
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms linear;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 400ms linear;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 400ms linear;
+}
+
+.fade-exit-done {
+  opacity: 0;
+}
+
 .flex-2 {
   flex: 1;
   position: relative;
