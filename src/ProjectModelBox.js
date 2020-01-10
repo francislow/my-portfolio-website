@@ -4,15 +4,20 @@ import * as projectsData from "./projectsData.json";
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
+import poorferimg1 from "./images/poofer-img-1.png";
+import poorferimg2 from "./images/poofer-img-2.png";
+import poorferimg3 from "./images/poofer-img-3.png";
+import poorferimg4 from "./images/poofer-img-4.png";
+
 function ProjectModelBox(props) {
   // All images (load all images here to solve the require() problem as static paths are required)
   const projectImgsHolder = {
     poofers: [
       {id: 1, url: require("./images/pooferitem.png")},
-      {id: 2, url: require("./images/poofer-img-1.png")},
-      {id: 3, url: require("./images/poofer-img-2.png")},
-      {id: 4, url: require("./images/poofer-img-3.png")},
-      {id: 5, url: require("./images/poofer-img-4.png")}
+      {id: 2, url: poorferimg1},
+      {id: 3, url: poorferimg2},
+      {id: 4, url: poorferimg3},
+      {id: 5, url: poorferimg4},
     ],
     unmix: [
       {id: 6, url: require("./images/unmixitem.png")},
@@ -38,7 +43,6 @@ function ProjectModelBox(props) {
   const projectImgs = projectImgsHolder[keyID];
 
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
-  // const [appear, setAppear] = useState(true);
 
   function setNextImg() {
     let newIndex =
