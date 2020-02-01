@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import poofersimg from "./images/poofersimg.png";
 import unmiximg from "./images/unmiximg.png";
-import portfoliopageimg from "./images/portfoliopageimg.png";
+import emailyyimg from "./images/emailyyimg.png";
 import ProjectComponent from "./ProjectComponent";
 
 function ProjectGallery() {
@@ -94,12 +94,12 @@ function ProjectGallery() {
         />
         <ProjectComponent
           specifiedGridDiv="div3"
-          keyId="portfolio-website"
-          img={portfoliopageimg}
+          keyId="emailyy"
+          img={emailyyimg}
           type="web"
-          altImgText="portfoliowebimg"
-          name="Portfolio"
-          tools="React"
+          altImgText="emailyyimg"
+          name="Emailyy"
+          tools="MERN Stack"
         />
       </div>
     </div>

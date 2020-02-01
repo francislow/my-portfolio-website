@@ -4,22 +4,23 @@
         "projectDesc": "A native android 2D arcade game application developed using libGDX, a Java game development framework.",
         "devTools": ["Android", "Java", "libGDX", "InkScape", "Android SDK"],
         "playstoreUrl": "https://play.google.com/store/apps/details?id=com.chalkboyygames",
-        "sourceCodeLink" : "https://github.com/francislow/poofers",
-        "isOnPlaystore": true
+        "weburl": "",
+        "sourceCodeLink" : "https://github.com/francislow/poofers"
     },
     "unmix": {
         "projectName": "Unmix",
         "projectDesc": "A native android application that allows user to store and manage pictures locally in a separate gallery",
         "devTools": ["Android", "Java", "SQLite", "Android SDK"],
         "playstoreUrl": "https://play.google.com/store/apps/details?id=com.chalkboystudios.franc.unmix",
-        "sourceCodeLink" : "https://github.com/francislow/unmix-photo-gallery",
-        "isOnPlaystore": true
+        "weburl": "",
+        "sourceCodeLink" : "https://github.com/francislow/unmix-photo-gallery"
     },
-    "portfolio-website": {
-        "projectName": "My Website",
-        "projectDesc": "This portfolio website is developed using React with responsive UI.",
-        "devTools": ["HTML", "CSS", "JavaScript", "React", "JSON", "InkScape"],
-        "sourceCodeLink" : "https://github.com/francislow/my-portfolio-website",
-        "isOnPlaystore": false
+    "emailyy": {
+        "projectName": "Emailyy",
+        "projectDesc": "A web app that allows user to mass send and track responses of survey emails. User logs in using Google OAuth, and pay via Stripe API. This project was built as part of a full stack web development course by Stephan Grider",
+        "devTools": ["JavaScript", "React", "Node", "MongoDB", "Express", "Redux", "OAuth", "Stripe", "Heroku"],
+        "playstoreUrl": "",
+        "weburl": "https://murmuring-thicket-55187.herokuapp.com",
+        "sourceCodeLink" : "https://github.com/francislow/emailyy"
     }
 }

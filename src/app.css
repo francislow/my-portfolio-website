@@ -647,18 +647,21 @@ html {
   position: relative;
 }
 
-.flex-7 div {
+.flex-7 .links-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.flex-7 .links-container div {
   font-size: 11px;
   display: inline;
-  padding: 5px;
+  padding: 3px;
+  margin: 5px;
   border: 0.7px solid rgba(109, 109, 109, 0.575);
-
-  position: absolute;
-  left: 2%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .flex-7 div a {
