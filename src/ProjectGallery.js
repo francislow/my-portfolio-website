@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import poofersimg from "./images/poofersimg.png";
 import unmiximg from "./images/unmiximg.png";
 import emailyyimg from "./images/emailyyimg.png";
+import assembleimg from "./images/assembleimg.png";
 import ProjectComponent from "./ProjectComponent";
 
 function ProjectGallery() {
@@ -75,7 +76,6 @@ function ProjectGallery() {
       </div>
       <div className="container">
         <ProjectComponent
-          specifiedGridDiv="div1"
           keyId="poofers"
           img={poofersimg}
           type="mobile"
@@ -84,7 +84,6 @@ function ProjectGallery() {
           tools="Native Android"
         />
         <ProjectComponent
-          specifiedGridDiv="div2"
           keyId="unmix"
           img={unmiximg}
           type="mobile"
@@ -93,13 +92,20 @@ function ProjectGallery() {
           tools="Native Android"
         />
         <ProjectComponent
-          specifiedGridDiv="div3"
           keyId="emailyy"
           img={emailyyimg}
           type="web"
           altImgText="emailyyimg"
           name="Emailyy"
-          tools="MERN Stack"
+          tools="Web App"
+        />
+        <ProjectComponent
+          keyId="assemble"
+          img={assembleimg}
+          type="mobile"
+          altImgText="assembleimg"
+          name="Assemble"
+          tools="Cross-platform Mobile App"
         />
       </div>
     </div>

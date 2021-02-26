@@ -11,20 +11,18 @@ import "./app.css";
 function App() {
   return (
     <>
-      <div className="fixed-bg">
-        <img src={require("./images/yellowbackground.jpg")} alt="fixed-bg" />
-      </div>
+      <div className="fixed-bg" ></div>
       <Navbar />
-      <div className="full-height" id="home">
+      <div className="full-height" id="home" style={{backgroundColor: "#EDC949"}}>
         <Home />
       </div>
-      <div id="about">
+      <div id="about" style={{backgroundColor: "rgb(255, 253, 210)"}}>
         <About />
       </div>
-      <div className="full-height" id="projects">
+      <div id="projects" style={{backgroundColor: "#EDC949"}}>
         <Project />
       </div>
-      <div className="full-height" id="contact">
+      <div className="full-height" id="contact" style={{backgroundColor: "rgb(255, 253, 210)"}}>
         <Contact />
       </div>
     </>

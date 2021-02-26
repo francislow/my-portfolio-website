@@ -4,6 +4,7 @@
         "projectDesc": "A native android 2D arcade game application developed using libGDX, a Java game development framework.",
         "devTools": ["Android", "Java", "libGDX", "InkScape", "Android SDK"],
         "playstoreUrl": "https://play.google.com/store/apps/details?id=com.chalkboyygames",
+        "appstoreUrl": "",
         "weburl": "",
         "sourceCodeLink" : "https://github.com/francislow/poofers"
     },
@@ -12,6 +13,7 @@
         "projectDesc": "A native android application that allows user to store and manage pictures locally in a separate gallery",
         "devTools": ["Android", "Java", "SQLite", "Android SDK"],
         "playstoreUrl": "https://play.google.com/store/apps/details?id=com.chalkboystudios.franc.unmix",
+        "appstoreUrl": "",
         "weburl": "",
         "sourceCodeLink" : "https://github.com/francislow/unmix-photo-gallery"
     },
@@ -20,7 +22,17 @@
         "projectDesc": "A web app that allows user to mass send and track responses of survey emails. User logs in using Google OAuth, and pay via Stripe API. This project was built as part of a full stack web development course by Stephan Grider",
         "devTools": ["JavaScript", "React", "Node", "MongoDB", "Express", "Redux", "OAuth", "Stripe", "Heroku"],
         "playstoreUrl": "",
+        "appstoreUrl": "",
         "weburl": "https://murmuring-thicket-55187.herokuapp.com",
         "sourceCodeLink" : "https://github.com/francislow/emailyy"
+    },
+    "assemble": {
+        "projectName": "Assemble",
+        "projectDesc": "A local app made for Singaporeans, which allows users to form meaningful relationship through daily suggested matches",
+        "devTools": ["NativeScript Vue", "Express", "Firebase services", "AWS services"],
+        "playstoreUrl": "https://play.google.com/store/apps/details?id=org.chalkboystudio.rootly",
+        "appstoreUrl": "https://apps.apple.com/us/app/assemble-local-dating-app/id1553270546",
+        "weburl": "",
+        "sourceCodeLink" : ""
     }
 }

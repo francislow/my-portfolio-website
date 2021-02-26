@@ -9,7 +9,8 @@ function Home() {
           <span id="appear">
             <img id="smiley" src={require("./images/smiley.png")}  alt="smileyimg" />
           </span>
-          <br />I love to create apps!
+          <br />
+          <span style={{fontSize: "20px"}}>Creating applications that add value drives me to do more!</span>
         </p>
         <div className="wrapper-explore moon-child-font">
           <a href="#about">

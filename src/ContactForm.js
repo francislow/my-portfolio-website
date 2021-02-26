@@ -128,6 +128,8 @@ function ContactForm() {
           <textarea
             className={`form-detail form-message ${msgColour}`}
             type="text"
+            style={{resize: "none"}}
+            resize="none"
             placeholder={msgPlaceholder}
             onChange={e => setSenderMsg(e.target.value)}
             value={senderMsg}

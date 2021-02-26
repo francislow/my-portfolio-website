@@ -6,9 +6,10 @@ function ProjectComponent(props) {
   return (
     <>
       <div
-        className={`filter-div photo-frame-container ${props.specifiedGridDiv} ${props.type} show`}
+        className={`filter-div photo-frame-container project-flex-item ${props.type} show`}
+        style={{ backgroundImage: `url(${props.img})` }}
       >
-        <img src={props.img} alt={props.altImgText} />
+        {/* <img src={props.img} alt={props.altImgText} height="100%"/> */}
         <div className="overlay">
           <div className="project-text">
             <div className="project-name">{props.name}</div>
@@ -18,7 +19,7 @@ function ProjectComponent(props) {
             onClick={() => setModelVisiblility("visible")}
             className="wrapper-info"
           >
-            More Info
+            View
           </div>
         </div>
       </div>

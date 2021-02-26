@@ -12,7 +12,7 @@ function About() {
         <div className="wrapper-profile-intro">
           <p className="intro-header">Who am I?</p>
           <p>
-            I am a student from{" "}
+            I am a final year student at{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -20,16 +20,14 @@ function About() {
             >
               National University of Singapore
             </a>
-            , passionate about application development. I aspire to be a
-            mobile/web developer in future. I enjoy learning new technology and
-            love the feeling of creating applications that add value to others'
-            lives.
+            , passionate about application development. I enjoy learning new technology and
+            love the feeling of creating applications. As an aspiring full-stack developer, it 
+            is the thrill of creating something impactful that gives me a sense of fulfillment. 
+            It gives me much satisfaction seeing a product take shape from merely an idea to its 
+            final form. Hence, I am looking to carve my career in this area. 
             <br />
-            <br />I am a firm believer that hard work, clear direction and good
-            execution are the three keys to succeed in anything in life and
-            strive to always practise them in my work. With a strong interest in
-            application development, I am looking to carve my career in this
-            area.
+            <br />I firmly believe there are three key elements to excel in any work we do; a 
+            clear sense of direction, good execution and facing obstacles with grit.
           </p>
 
           <div className="wrapper-skills-content">
@@ -47,6 +45,10 @@ function About() {
               <div>Express</div>
               <div>REST API</div>
               <div>MongoDB</div>
+              <div>NativeScript Vue</div>
+              <div>Vue</div>
+              <div>Firebase Services</div>
+              <div>AWS Services</div>
             </div>
           </div>
         </div>

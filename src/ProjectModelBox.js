@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import * as projectsData from './projectsData.json';
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import appstore_badge from './images/appstore_badge.png'
 
 function ProjectModelBox(props) {
   // All images (load all images here to solve the require() problem as static paths are required)
@@ -21,11 +22,24 @@ function ProjectModelBox(props) {
       { id: 9, url: require('./images/unmix-img-3.png') }
     ],
     emailyy: [
-      { id: 10, url: require('./images/emailyyitem.png') },
       { id: 11, url: require('./images/emailyy-img-1.png') },
       { id: 12, url: require('./images/emailyy-img-2.png') },
       { id: 13, url: require('./images/emailyy-img-3.png') },
-      { id: 14, url: require('./images/emailyy-img-4.png') }
+      { id: 14, url: require('./images/emailyy-img-4.png') },
+      { id: 15, url: require('./images/emailyy-img-5.png') },
+      { id: 16, url: require('./images/emailyy-img-6.png') },
+    ],
+    assemble: [
+      { id: 17, url: require('./images/assemble-img-1.png') },
+      { id: 18, url: require('./images/assemble-img-2.png') },
+      { id: 19, url: require('./images/assemble-img-3.png') },
+      { id: 20, url: require('./images/assemble-img-4.png') },
+      { id: 21, url: require('./images/assemble-img-5.png') },
+      { id: 22, url: require('./images/assemble-img-6.png') },
+      { id: 23, url: require('./images/assemble-img-7.png') },
+      { id: 24, url: require('./images/assemble-img-8.png') },
+      { id: 25, url: require('./images/assemble-img-9.png') },
+      { id: 26, url: require('./images/assemble-img-10.png') },
     ]
   };
 
@@ -35,6 +49,7 @@ function ProjectModelBox(props) {
   const sourceCodeLink = projectsData.default[keyID].sourceCodeLink;
   const projectTools = projectsData.default[keyID].devTools;
   const playstoreUrl = projectsData.default[keyID].playstoreUrl;
+  const appstoreUrl = projectsData.default[keyID].appstoreUrl;
   const weburl = projectsData.default[keyID].weburl;
   const projectImgs = projectImgsHolder[keyID];
 
@@ -93,33 +108,48 @@ function ProjectModelBox(props) {
         <div className='flex-4'>
           <p>{projectDesc}</p>
         </div>
-        <div className='flex-5'>
-          <div className='wrapper-dev-tools'>{devtoolComponents}</div>
-        </div>
         {playstoreUrl ? (
           <div className='flex-6'>
             <a target='_blank' rel='noopener noreferrer' href={playstoreUrl}>
               <img
-                alt='Get it on Google Play'
+                style={{height: "100%"}}
+                alt='Get it on Google Play Store'
                 src='https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png'
               />
             </a>
           </div>
         ) : null}
-        <div className='flex-7'>
-          <div className="links-container">
-          <div>
-            <a target='_blank' rel='noopener noreferrer' href={sourceCodeLink}>
-              Source Code
+        {appstoreUrl ? (
+          <div className='flex-6' style={{marginTop: "7px", marginBottom: "5px"}}>
+            <a target='_blank' rel='noopener noreferrer' href={appstoreUrl}>
+              <img
+                style={{height: "100%"}}
+                alt='Get it on the App Store'
+                src={appstore_badge}
+              />
             </a>
           </div>
-          {weburl ? (
-            <div class="visit">
-              <a target='_blank' rel='noopener noreferrer' href={weburl}>
-                Visit
-              </a>
-            </div>
-          ) : null}
+        ) : null}
+        <div className='flex-5'>
+          <div className='wrapper-dev-tools'>{devtoolComponents}</div>
+        </div>
+        <div className='flex-7'>
+          <div className="links-container">
+
+            {sourceCodeLink ? (
+              <div>
+                <a target='_blank' rel='noopener noreferrer' href={sourceCodeLink}>
+                  Source Code
+                </a>
+              </div>
+            ) : null}
+            {weburl ? (
+              <div class="visit">
+                <a target='_blank' rel='noopener noreferrer' href={weburl}>
+                  Visit
+                </a>
+              </div>
+            ) : null}
           </div>
           <span
             onClick={() => props.setVisibility('invisible')}
